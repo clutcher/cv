@@ -1,0 +1,163 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% "ModernCV" CV and Cover Letter
+% LaTeX Template
+% Version 1.1 (9/12/12)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Xavier Danaux (xdanaux@gmail.com)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+% Important note:
+% This template requires the moderncv.cls and .sty files to be in the same 
+% directory as this .tex file. These files provide the resume style and themes 
+% used for structuring the document.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[11pt,a4paper,sans]{moderncv} % Font sizes: 10, 11, or 12; paper sizes: a4paper, letterpaper, a5paper, legalpaper, executivepaper or landscape; font families: sans or roman
+
+\moderncvstyle{casual} % CV theme - options include: 'casual' (default), 'classic', 'oldstyle' and 'banking'
+\moderncvcolor{blue} % CV color - options include: 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+
+% \usepackage{lipsum} % Used for inserting dummy 'Lorem ipsum' text into the template
+
+\usepackage[scale=0.8]{geometry} % Reduce document margins
+%\setlength{\hintscolumnwidth}{3cm} % Uncomment to change the width of the dates column
+%\setlength{\makecvtitlenamewidth}{10cm} % For the 'classic' style, uncomment to adjust the width of the space allocated to your name
+
+%----------------------------------------------------------------------------------------
+%	NAME AND CONTACT INFORMATION SECTION
+%----------------------------------------------------------------------------------------
+
+\firstname{Igor} % Your first name
+\familyname{Zarvanskyi} % Your last name
+
+\address{Igor Zarvanskyi}{Kiev, Ukraine}
+\mobile{+38 (093) 307 5219}
+\email{iclutcher@gmail.com}
+% \photo[70pt][0.4pt]{pictures/picture} % The first bracket is the picture height, the second is the thickness of the frame around the picture (0pt for no frame)
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\makecvtitle % Print the CV title
+%----------------------------------------------------------------------------------------
+%	SUMMARY SECTION
+%----------------------------------------------------------------------------------------
+
+\section{Summary of qualification}
+
+\cvitem{Languages}{Java, Python, PHP}
+\cvitem{Databases}{MySQL, MongoDB}
+\cvitem{Frameworks}{Java: Hybris platform, Spring; Python: Django, DRF; PHP: Symfony2}
+\cvitem{Technologies}{Tomcat, Apache Solr, AWS, Docker, Git}
+
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION SECTION
+%----------------------------------------------------------------------------------------
+
+\section{Education}
+
+% \cventry{2018}{Certification}{SAP}{Succesfully passed SAP Hybris developer 6.2 certification}{}{}
+\cventry{2013--2015}{PhD Student}{National Technical University of Ukraine ``Kyiv Polytechnic Institute''}{Educational-scientific complex ``Institute for applied system analysis'', Department of mathematical methods of system analysis}{Diploma thesis: Analysis of numerical series using graphs visibility methods to predict heart disease}{}
+\cventry{2011--2013}{Masters of Applied mathematics}{National Technical University of Ukraine ``Kyiv Polytechnic Institute''}{Department of applied mathematics}{Diploma thesis: Model of complex web-networks with second-order phase transition}{}
+\cventry{08.2012}{European Summer School in Industrial Mathematics 
+and Modelling}{Technische Universitat Dresden}{}{}{}
+\cventry{2007--2011}{Bachelor of Applied mathematics}{National Technical University of Ukraine ``Kyiv Polytechnic Institute''}{Department of applied mathematics}{Diploma thesis: Distributed expert-analytical system of POS sales and service}{}
+
+
+%----------------------------------------------------------------------------------------
+%	WORK EXPERIENCE SECTION
+%----------------------------------------------------------------------------------------
+
+\section{Experience}
+
+\subsection{Vocational}
+\cventry{2015--Present}{Java(Hybris) Developer/Team Lead}{\textsc{SkyWind}}{Kiev}{(3 years)}{
+Started working in company as Java Developer on big e-commerce project made on Hybris platform, in 2 years was promoted to Team Lead.
+    \begin{itemize}
+        \item {Everything5pounds}\newline{}
+        \emph{Description:} Apparel selling e-commerce web site with up to 40k simultaneous users and 3 mil pounds revenue per month.\newline{}
+        \emph{Technology stack:} java, mysql, hybris, spring, jsp, angular.\newline{}
+        \emph{Responsibilities:}
+        \begin{itemize}
+            \item As Developer: implemeted session storing in Hybris, implemented system for product feed generating for different consumers, implemented integration with commerce hub, bronto, paypal, safecharge. Provided migrations from Hybris 5.3 up to Hybris 6.5. Configured solr search servers. Remade hybris default order/consignment processes. Developed API for Whitelabel integration. Implemented social login. Improved Backoffice commerce search widgets.  
+            \item As Team Lead: introduced TDD approach inside team. Established CI and CI monitoring tools including Sonar scanner checks. Performed unit testing and peer review for development team. Developed tool for measuring developers and team productivity. Contributed to design systems architecture, execute business logic and support functions. Made valuable contribution in switching deployment system to Docker.
+        \end{itemize}
+    \end{itemize}  
+}
+\cventry{2013--2015}{PHP Developer}{\textsc{JayaDigital}}{Kiev}{(1 year 2 months)}{
+Bug fixing and full support of existing systems based on Magento (www.chytayka.com.ua, ukrteaco.com etc). Also was developed few big projects on symfony2. The most intresting, developed from scratch, project was CryptoCash:
+    \begin{itemize}
+    \item {CryptoCash}\newline{}
+        \emph{Description:} Web App for electronic money exchange.\newline{}
+        \emph{Technology stack:} php, mysql, symfony2, composer, twig.\newline{}
+        \emph{Responsibilities:} developed multi-module system for electronic money exchange. Implemented integrations with WebMoney, YandexMoney, Qiwi, PerfectMoney, Blockchain(Bitcoin), Privat24, OkPay, EgoPay. Designed and developed exchange process workflow. Designed and implemented server infrastructure on AWS.
+    \end{itemize}    
+}
+\cventry{2007--2014}{Web Developer}{\textsc{Freelance}}{Kiev}{(7 years)}{
+    \emph{Description:} Developed more than 50 dynamic web sites in different areas: e-commerce, social networks, corporate sites etc.\newline{}
+    \emph{Technology stack:} php, mysql, Drupal 6/7, jquery.\newline{}
+    \emph{Responsibilities:} full app development. 
+}
+
+%------------------------------------------------
+
+\subsection{Miscellaneous}
+
+\cventry{2007--2014}{System Administator}{Vogt Medical Vertrieb GMBH}{Kiev}{(7 years)}{Provide Windows/Linux administration, network operating center administration, LAN/WAN/VPN administration, intrusion detection and prevention monitoring. Also manage FTP servers, AD/DNS, wireless access points and load balancers. Design and implement highly available and disaster recovery solutions.}
+
+
+\section{Pet projects}
+\cventry{2016--Present}{Metrics}{}{}{(2 years)}{
+    \emph{Description:} web application for measuring developers productivity, calculate estimations, make prediction about release dates, combine release notes, CI monitor.\newline{}
+    \emph{Technology stack:} python3, django, python-jira, python-bitbucket.\newline{}
+    \emph{Responsibilities:} app full development.
+}
+\cventry{2015--2017}{Keymaster}{}{}{(2 years)}{
+    \emph{Description:} web application for route planning and managing markers on map.\newline{}
+    \emph{Technology stack:} python3, postgresql, django, DRF, leaflet.js, angular.\newline{}
+    \emph{Responsibilities:} app full development.
+}
+\cventry{2012--2015}{KPS}{}{}{(2 years 6 months)}{
+    \emph{Description:} Set of script for analizing cardiogram and make disease prediction.\newline{}
+    \emph{Technology stack:} python2, networkx, matplotlib\newline{}
+    \emph{Responsibilities:} app full development, using cprofile to profile and icrease speed of app, process data in gpickle, xls, txt, math backgroud.
+}
+
+%----------------------------------------------------------------------------------------
+%	AWARD SECTION
+%----------------------------------------------------------------------------------------
+
+% \section{Awards}
+
+% \cvitem{2011}{School of Business Postgraduate Scholarship}
+% \cvitem{2010}{Top Achiever Award -- Commerce}
+
+%----------------------------------------------------------------------------------------
+%	LANGUAGES SECTION
+%----------------------------------------------------------------------------------------
+
+\section{Languages}
+
+% \renewcommand{\listitemsymbol}{~} % Changes the symbol used for lists
+
+% \cvlistdoubleitem{\cvitemwithcomment{English}{Intermediate}{}}{\cvitemwithcomment{Russian}{Native}{}}
+% \cvlistdoubleitem{\cvitemwithcomment{Romanian}{Elementary}{}}{\cvitemwithcomment{Ukraine}{Native}{}}
+
+\cvitemwithcomment{Russian}{Native}{}
+\cvitemwithcomment{Ukraine}{Native}{}
+\cvitemwithcomment{English}{Intermediate}{}
+\cvitemwithcomment{Romanian}{Elementary}{}
+\end{document}
