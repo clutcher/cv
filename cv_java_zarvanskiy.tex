@@ -9,6 +9,7 @@
 % Original author:
 % Xavier Danaux (xdanaux@gmail.com)
 %
+%
 % License:
 % CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
 %
@@ -44,6 +45,7 @@
 \address{Igor Zarvanskyi}{Kiev, Ukraine}
 \mobile{+38 (093) 307 5219}
 \email{iclutcher@gmail.com}
+\homepage{https://clutcher.github.io}{https://clutcher.github.io}
 % \photo[70pt][0.4pt]{pictures/picture} % The first bracket is the picture height, the second is the thickness of the frame around the picture (0pt for no frame)
 
 %----------------------------------------------------------------------------------------
@@ -87,43 +89,52 @@ and Modelling}{Technische Universitat Dresden}{}{}{}
 \section{Experience}
 
 \subsection{Vocational}
-\cventry{2015--2018}{Java(Hybris) Developer/Team Lead}{\textsc{SkyWind}}{Kiev}{(3 years)}{
-Started working in company as Java Developer on big e-commerce project made on Hybris platform, was promoted to Team Lead. Build team of 7 developers from scratch. 
+\cventry{2018--Now}{Hybris Tech Lead}{\textsc{Optaros}}{Kiev}{}{
+B2B project for Clarks with multi-country support.
     \begin{itemize}
-        \item {Everything5pounds}\newline{}
-        \emph{Description:} Apparel selling e-commerce web site with up to 40k simultaneous users and 3 mil pounds revenue per month.\newline{}
-        \emph{Technology stack:} java, mysql, hybris, spring, jsp, angular.\newline{}
+        \item {Clarks}\newline{}
+        \emph{Description:} Shoes selling e-commerce B2B site.\newline{}
+        \emph{Technology stack:} java, mysql, hybris, datahub, spring, jsp, ES6.\newline{}
         \emph{Responsibilities:}
         \begin{itemize}
-            \item As Developer: implemeted session storing in Hybris, implemented system for product feed generating for different consumers, implemented integration with commerce hub, bronto, paypal, safecharge. Provided migrations from Hybris 5.3 up to Hybris 6.5. Configured solr search servers. Remade hybris default order/consignment processes. Developed API for Whitelabel integration. Implemented social login. Improved Backoffice commerce search widgets.  
-            \item As Team Lead: introduced TDD approach inside team. Established CI and CI monitoring tools including Sonar scanner checks. Performed unit testing and peer review for development team. Developed tool for measuring developers and team productivity. Contributed to design systems architecture, execute business logic and support functions. Made valuable contribution in switching deployment system to Docker.
+            \item As Tech Lead: lead the technical direction during design and development processes by driving decisions and coordinating efforts. Provided guidance to Hybris developers during design, development and implementation of features. Created interface designs and high-level solution designs. Provided implementation expertise in how best to implement and use Hybris, identified scope gaps, advised on workaround solutions when applicable. Analyzed business and IT challenges and designed a comprehensive solutions that integrates smoothly. Designed and implemented integration with 3rd party systems including legacy backend applications (SAP). Introduced TDD approach inside team. Established CI/CD pipeline and CI monitoring tools including Sonar scanner checks.
+            \item As Developer: initial B2B project setup. Added multi-country support. Migrated hybris 6.7 to hybris 1811. Implemented master data exchange(Customers, Products) between hybris and SAP via datahub. Implemented product and CMS component user segmentation based on personalization module. Integrated webpack for frontend build. JS implementation of CMS components.
         \end{itemize}
     \end{itemize}  
 }
-\cventry{2013--2015}{PHP Developer}{\textsc{JayaDigital}}{Kiev}{(1 year 2 months)}{
-Bug fixing and full support of existing systems based on Magento (www.chytayka.com.ua, ukrteaco.com etc). Also was developed few big projects on symfony2. The most intresting, developed from scratch, project was CryptoCash:
+\cventry{2015--2018}{Hybris Developer/Team Lead}{\textsc{Everything5pounds}}{Kiev}{(3 years)}{
+Started working in company as Java Developer on big e-commerce project(B2C) made on Hybris platform, was promoted to Team Lead. Build team of 6 developers from scratch. 
     \begin{itemize}
-    \item {CryptoCash}\newline{}
-        \emph{Description:} Web App for electronic money exchange.\newline{}
-        \emph{Technology stack:} php, mysql, symfony2, composer, twig.\newline{}
-        \emph{Responsibilities:} developed multi-module system for electronic money exchange. Implemented integrations with WebMoney, YandexMoney, Qiwi, PerfectMoney, Blockchain(Bitcoin), Privat24, OkPay, EgoPay. Designed and developed exchange process workflow. Designed and implemented server infrastructure on AWS.
-    \end{itemize}    
-}
-\cventry{2007--2014}{Web Developer}{\textsc{Freelance}}{Kiev}{(7 years)}{
-    \emph{Description:} Developed more than 50 dynamic web sites in different areas: e-commerce, social networks, corporate sites etc.\newline{}
-    \emph{Technology stack:} php, mysql, Drupal 6/7, jquery.\newline{}
-    \emph{Responsibilities:} full app development. 
+        \item {Everything5pounds}\newline{}
+        \emph{Description:} Apparel selling e-commerce web site with up to 40k simultaneous users and 3 mil pounds revenue per month.\newline{}
+        \emph{Technology stack:} java, mysql, hybris, spring, jsp, angular1.\newline{}
+        \emph{Responsibilities:}
+        \begin{itemize}
+            \item As Team Lead: introduced TDD approach inside team. Established CI and CI monitoring tools including Sonar scanner checks. Performed peer review for development team. Provided support in detailed project planning activities, daily scrum, code review and deadline management. Developed tool for measuring developers and team productivity. Contributed to design systems architecture, execute business logic and support functions. Made valuable contribution in switching deployment system to Docker.
+            \item As Developer: implemeted session storing in Hybris, implemented system for product feed generating for different consumers, implemented integration with commerce hub, bronto, paypal, safecharge. Provided migrations from Hybris 5.3 up to Hybris 6.5. Configured solr search servers. Remade hybris default order/consignment processes. Developed API for Whitelabel integration. Implemented social login. Improved Backoffice commerce search widgets.  
+        \end{itemize}
+    \end{itemize}  
 }
 
 %------------------------------------------------
 
 \subsection{Miscellaneous}
 
+\cventry{2013--2015}{PHP Developer}{\textsc{JayaDigital}}{Kiev}{(2 years)}{
+    \emph{Description:} Bug fixing and full support of existing systems based on Magento. Developed web application for electronic money exchange on symfony2.\newline{}
+    \emph{Technology stack:} php5, mysql, symfony2, composer, twig.\newline{}
+    \emph{Responsibilities:} developed multi-module system for electronic money exchange. Implemented integrations with WebMoney, YandexMoney, Qiwi, PerfectMoney, Blockchain(Bitcoin), Privat24, OkPay, EgoPay. Designed and developed exchange process workflow. Designed and implemented server infrastructure on AWS.
+}
+\cventry{2007--2014}{Web Developer}{\textsc{Freelance}}{Kiev}{(7 years)}{
+    \emph{Description:} Developed more than 50 dynamic web sites in different areas: e-commerce, social networks, corporate sites etc.\newline{}
+    \emph{Technology stack:} php5, mysql, Drupal 6/7, jquery.\newline{}
+    \emph{Responsibilities:} full app development. 
+}
 \cventry{2007--2014}{System Administator}{Vogt Medical Vertrieb GMBH}{Kiev}{(7 years)}{Provide Windows/Linux administration, network operating center administration, LAN/WAN/VPN administration, intrusion detection and prevention monitoring. Also manage FTP servers, AD/DNS, wireless access points and load balancers. Design and implement highly available and disaster recovery solutions.}
 
 
 \section{Pet projects}
-\cventry{2016--Present}{Metrics}{}{}{(2 years)}{
+\cventry{2016--2018}{Metrics}{}{}{(2 years)}{
     \emph{Description:} web application for measuring developers productivity, calculate estimations, make prediction about release dates, combine release notes, CI monitor.\newline{}
     \emph{Technology stack:} python3, django, python-jira, python-bitbucket.\newline{}
     \emph{Responsibilities:} app full development.
@@ -133,11 +144,11 @@ Bug fixing and full support of existing systems based on Magento (www.chytayka.c
     \emph{Technology stack:} python3, postgresql, django, DRF, leaflet.js, angular.\newline{}
     \emph{Responsibilities:} app full development.
 }
-\cventry{2012--2015}{KPS}{}{}{(2 years 6 months)}{
-    \emph{Description:} Set of script for analizing cardiogram and make disease prediction.\newline{}
-    \emph{Technology stack:} python2, networkx, matplotlib\newline{}
-    \emph{Responsibilities:} app full development, using cprofile to profile and icrease speed of app, process data in gpickle, xls, txt, math backgroud.
-}
+% \cventry{2012--2015}{KPS}{}{}{(3 years)}{
+%     \emph{Description:} Set of script for analizing cardiogram and make disease prediction.\newline{}
+%     \emph{Technology stack:} python2, networkx, matplotlib\newline{}
+%     \emph{Responsibilities:} app full development, using cprofile to profile and icrease speed of app, process data in gpickle, xls, txt, math backgroud.
+% }
 
 %----------------------------------------------------------------------------------------
 %	AWARD SECTION
@@ -152,15 +163,15 @@ Bug fixing and full support of existing systems based on Magento (www.chytayka.c
 %	LANGUAGES SECTION
 %----------------------------------------------------------------------------------------
 
-\section{Languages}
+% \section{Languages}
 
 % \renewcommand{\listitemsymbol}{~} % Changes the symbol used for lists
 
 % \cvlistdoubleitem{\cvitemwithcomment{English}{Intermediate}{}}{\cvitemwithcomment{Russian}{Native}{}}
 % \cvlistdoubleitem{\cvitemwithcomment{Romanian}{Elementary}{}}{\cvitemwithcomment{Ukraine}{Native}{}}
 
-\cvitemwithcomment{Russian}{Native}{}
-\cvitemwithcomment{Ukraine}{Native}{}
-\cvitemwithcomment{English}{Intermediate}{}
-\cvitemwithcomment{Romanian}{Elementary}{}
+% \cvitemwithcomment{Russian}{Native}{}
+% \cvitemwithcomment{Ukraine}{Native}{}
+% \cvitemwithcomment{English}{Intermediate}{}
+% \cvitemwithcomment{Romanian}{Elementary}{}
 \end{document}
