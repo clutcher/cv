@@ -1,0 +1,85 @@
+\documentclass[10pt]{article}
+% Define the tightlist command to avoid Pandoc error
+\providecommand{\tightlist}{%
+    \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+% Additional packages
+\usepackage{lmodern} % Latin Modern fonts
+\usepackage{hyperref} % Hyperlinks
+\usepackage{titlesec} % For section title formatting
+\usepackage{tikz} % For drawing lines
+\usepackage{fontspec} % For custom fonts
+\usepackage{enumitem} % For custom lists
+\usepackage{color} % For custom colors
+
+% Adjust the page margins
+\usepackage[a4paper, margin=1.5cm]{geometry}
+
+% Adjust left margins and intendations on all elements
+\setlength{\parindent}{0pt}
+\titlespacing*{\subsubsection}{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+\setlist[itemize]{
+    align=left,
+    leftmargin=0pt,
+    labelwidth=1.em,
+    itemindent=1.em,
+    labelsep=0pt,
+}
+
+% Define Colors
+\definecolor{linecolor}{RGB}{221, 221, 221} % Header line color
+\definecolor{accentcolor}{RGB}{56, 115, 179} % Additional accent color
+
+\definecolor{mainfontcolor}{RGB}{115, 115, 115} % Font main color
+\definecolor{additionalfontcolor}{RGB}{52, 73, 94} % Font additional color
+
+% Change fonts
+\setmainfont{Source Sans Pro}
+\color{mainfontcolor}
+
+% Disable numbering on \section, \subsection, \subsubsection
+\makeatletter
+\renewcommand{\@seccntformat}[1]{}
+\renewcommand{\thesubsection}{}
+\renewcommand{\thesubsubsection}{}
+\makeatother
+
+% Disable page numbering
+\pagenumbering{gobble}
+
+% Change color for bullet list markers
+\renewcommand{\labelitemi}{\textcolor{accentcolor}{\textbullet}}
+
+% Display all \emph on the right side of same line (used for dates and places)
+\let\oldemph\emph
+\renewcommand{\emph}[1]{\hfill{\small\normalfont\oldemph{#1}}}
+
+% Redefine \textbf with color (used for job title)
+\let\oldtextbf\textbf
+\renewcommand{\textbf}[1]{\textcolor{additionalfontcolor}{\oldtextbf{#1}}}
+
+% Display \section on right side and adjust font (used for first and last name)
+\makeatletter
+\renewcommand\section{\@startsection {section}{1}{\z@}%
+{-3.5ex \@plus -1ex \@minus -.2ex}%
+{2.3ex \@plus.2ex}%
+{\normalfont\Huge\bfseries\raggedleft\color{accentcolor}}}
+\makeatother
+
+% Add green and grey lines under \subsection and font size (used for main sections work experience etc.)
+\titleformat{\subsection}[hang]{\LARGE\color{mainfontcolor}}{}{0pt}{%
+    \noindent%
+    \tikz[overlay,remember picture,baseline=(a.base)]{%
+        \coordinate (a) at (0,0);%
+        \draw[line width=1pt, linecolor] (0,-3pt) -- (\linewidth,-3pt);%
+        \draw[line width=3pt, accentcolor] (0,-3pt) -- (0.08\linewidth,-3pt);%
+    }%
+}
+
+% Adjust \subsubsection font size (used for company names)
+\titleformat{\subsubsection}[hang]{\Large\bfseries\color{accentcolor}}{}{0pt}{}
+
+
+\begin{document}
+    $body$
+\end{document}
