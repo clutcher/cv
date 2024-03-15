@@ -15,7 +15,7 @@
 % Adjust the page margins
 \usepackage[a4paper, margin=1.5cm]{geometry}
 
-% Adjust left margins and intendations on all elements
+% Adjust left margins and indentations on all elements
 \setlength{\parindent}{0pt}
 \titlespacing*{\subsubsection}{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
 \setlist[itemize]{
@@ -35,9 +35,12 @@
 
 % Change fonts
 \setmainfont{Source Sans Pro}
+\setsansfont{Source Sans Pro}
+\setmonofont{Source Sans Pro}
+
 \color{mainfontcolor}
 
-% Disable numbering on \section, \subsection, \subsubsection
+% Disable numbering on \section, \subsection, \subsubsection (markdown h1, h2, h3)
 \makeatletter
 \renewcommand{\@seccntformat}[1]{}
 \renewcommand{\thesubsection}{}
@@ -50,15 +53,21 @@
 % Change color for bullet list markers
 \renewcommand{\labelitemi}{\textcolor{accentcolor}{\textbullet}}
 
-% Display all \emph on the right side of same line (used for dates and places)
+% Display all \emph (markdown italic font) on the right side of same line (used for dates and places)
 \let\oldemph\emph
 \renewcommand{\emph}[1]{\hfill{\small\normalfont\oldemph{#1}}}
 
-% Redefine \textbf with color (used for job title)
+% Redefine \textbf (markdown bold font) with color (used for job title)
 \let\oldtextbf\textbf
 \renewcommand{\textbf}[1]{\textcolor{additionalfontcolor}{\oldtextbf{#1}}}
 
-% Display \section on right side and adjust font (used for first and last name)
+% Underline Hyperlinks
+\hypersetup{
+    urlbordercolor = mainfontcolor,
+    pdfborderstyle={/S/U/W 0.01},
+}
+
+% Display \section on right side and adjust font (markdown h1; used for first and last name)
 \makeatletter
 \renewcommand\section{\@startsection {section}{1}{\z@}%
 {-3.5ex \@plus -1ex \@minus -.2ex}%
@@ -66,7 +75,7 @@
 {\normalfont\Huge\bfseries\raggedleft\color{accentcolor}}}
 \makeatother
 
-% Add green and grey lines under \subsection and font size (used for main sections work experience etc.)
+% Add green and grey lines under \subsection and font size (markdown h2; used for main sections work experience etc.)
 \titleformat{\subsection}[hang]{\LARGE\color{mainfontcolor}}{}{0pt}{%
     \noindent%
     \tikz[overlay,remember picture,baseline=(a.base)]{%
@@ -76,7 +85,7 @@
     }%
 }
 
-% Adjust \subsubsection font size (used for company names)
+% Adjust \subsubsection font size (markdown h3; used for company names)
 \titleformat{\subsubsection}[hang]{\Large\bfseries\color{accentcolor}}{}{0pt}{}
 
 
