@@ -68,7 +68,7 @@ Software architect and engineering leader with 20 years in software since 2007, 
 
 **Senior Software Engineer | SAP Commerce, Java @ Trek Bicycles** _Sep 2019 to Jul 2020_
 
-- Reduced PDP page load time from 6 seconds to 50 milliseconds.
+- Reduced PDP page load time from 6 seconds to 250 milliseconds.
 - Cut SAP Hybris startup time from 10 minutes to 4 minutes.
 - Accelerated SAP Hybris Ant build time, reducing it from 5 minutes to 2 minutes.
 - Reworked Solr product indexing process, resulting in a 70% speedup in Solr index time.
