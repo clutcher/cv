@@ -15,7 +15,7 @@ This repository makes it easy to convert your Markdown-based resume to a PDF in 
    ```bash
    ./convert.sh
    ```
-3. **Get your PDF** By default, the script will generate a PDF named `igor_zarvanskyi_sap_commerce.pdf` in the root directory. You can modify the output file name by editing the `convert.sh` script. Simply change the `OUTPUT_FILE_NAME` variable to your preferred name.
+3. **Get your PDF** By default, the script will generate a PDF named `igor_zarvanskyi_cv.pdf` in the root directory. You can modify the output file name by editing the `convert.sh` script. Simply change the `OUTPUT_FILE_NAME` variable to your preferred name.
 
 ## Implementation Details
 
@@ -30,7 +30,7 @@ This repository makes it easy to convert your Markdown-based resume to a PDF in 
 1. The `convert.sh` script runs a Docker container using the `pandoc/extra` image, which has Pandoc and LaTeX pre-installed.
 2. The script mounts the current directory (`$PWD`) into the Docker container, allowing Pandoc to access `resume.md` and `resume-style.tex`.
 3. Pandoc uses the custom LaTeX template (`resume-style.tex`) to format the content of `resume.md`.
-4. The final output is a PDF file (default: `igor_zarvanskyi_sap_commerce.pdf` or your custom file name) generated with `lualatex` as the PDF engine.
+4. The final output is a PDF file (default: `igor_zarvanskyi_cv.pdf` or your custom file name) generated with `pdflatex` as the PDF engine, which writes real spaces into the PDF text for ATS parsers.
 
 ## LaTeX Template (`resume-style.tex`)
 
