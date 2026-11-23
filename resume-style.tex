@@ -8,15 +8,26 @@
 \usepackage{hyperref} % Hyperlinks
 \usepackage{titlesec} % For section title formatting
 \usepackage{tikz} % For drawing lines
-\usepackage{fontspec} % For custom fonts
+% Source Sans Pro for pdflatex; pdflatex is used because it writes real spaces into the PDF, which LuaLaTeX does not, and some ATS parsers read the text without them
+\usepackage[T1]{fontenc}
+\usepackage[default]{sourcesanspro}
+\input{glyphtounicode}\pdfgentounicode=1
+\pdfinterwordspaceon\pdffakespace
 \usepackage{enumitem} % For custom lists
 \usepackage{color} % For custom colors
 
 % Adjust the page margins
 \usepackage[a4paper, margin=1.5cm]{geometry}
 
+% No hyphenation: a split word reads worse and can break keyword matching of ATS parsers
+\hyphenpenalty=10000
+\exhyphenpenalty=10000
+\setlength{\emergencystretch}{3em}
+
 % Adjust left margins and indentations on all elements
 \setlength{\parindent}{0pt}
+% A markdown blockquote is a block set apart from the text above it, without indent (used for the core expertise line)
+\renewenvironment{quote}{\par\medskip}{\par}
 \titlespacing*{\subsubsection}{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
 \setlist[itemize]{
     align=left,
@@ -33,10 +44,6 @@
 \definecolor{mainfontcolor}{RGB}{115, 115, 115} % Font main color
 \definecolor{additionalfontcolor}{RGB}{52, 73, 94} % Font additional color
 
-% Change fonts
-\setmainfont{Source Sans Pro}
-\setsansfont{Source Sans Pro}
-\setmonofont{Source Sans Pro}
 
 \color{mainfontcolor}
 
@@ -62,10 +69,19 @@
 \renewcommand{\textbf}[1]{\textcolor{additionalfontcolor}{\oldtextbf{#1}}}
 
 % Underline Hyperlinks
+% The underline is drawn in the text, not as a PDF link border: a border is often not printed, and its distance from the text changes with descenders
 \hypersetup{
-    urlbordercolor = mainfontcolor,
-    pdfborderstyle={/S/U/W 0.01},
+    pdfborder={0 0 0},
+    pdftitle={Igor Zarvanskyi - Software Architect and Engineering Leader},
+    pdfauthor={Igor Zarvanskyi},
+    pdfkeywords={Software Architect, Engineering Leader, Engineering Manager, Agentic AI Engineering, Multi-agent Systems, Claude Code, Microservices, Java, Spring Boot, SAP Commerce},
 }
+\let\oldhref\href
+\renewcommand{\href}[2]{\oldhref{#1}{\underline{#2\vphantom{y}}}}
+
+% Professional title under the name, right aligned like the name and contacts (markdown h4); without an h4 nothing is shown
+\titleformat{\paragraph}[block]{\raggedleft\Large\color{additionalfontcolor}}{}{0pt}{}
+\titlespacing*{\paragraph}{0pt}{0pt}{1.5ex}
 
 % Display \section on right side and adjust font (markdown h1; used for first and last name)
 \makeatletter
@@ -88,6 +104,10 @@
 % Adjust \subsubsection font size (markdown h3; used for company names)
 \titleformat{\subsubsection}[hang]{\Large\bfseries\color{accentcolor}}{}{0pt}{}
 
+
+% Write URLs in the text font without break points, so no fake spaces appear inside them
+\urlstyle{same}
+\makeatletter\def\UrlBreaks{}\def\UrlBigBreaks{}\def\UrlNoBreaks{}\def\UrlSpecials{}\makeatother
 
 \begin{document}
     $body$
