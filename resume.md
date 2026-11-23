@@ -12,7 +12,7 @@ _[clutcher.dev](https://clutcher.dev/)_
 
 ## SUMMARY
 
-Software architect and engineering leader with 20 years in software since 2007, building enterprise platforms for global brands including ABB, Trek Bicycles, Swagelok and Clarks, leading teams of up to 25 and setting architecture and processes for a ~100-person technology department. At ABB, set the AI adoption strategy and moved a ~19-person team to agentic engineering with Claude Code, doubling delivery with the same team. Author of the book Laminar Software Design.
+Software architect and engineering leader with 20 years of experience since 2007, building enterprise platforms for global brands including ABB, Trek Bicycles, Swagelok and Clarks, leading teams of up to 25 and setting architecture and processes for a ~100-person technology department. At ABB, set the AI adoption strategy and moved a ~19-person team to agentic engineering with Claude Code, doubling delivery with the same team. Author of the book Laminar Software Design.
 
 > **Core expertise:** Agentic engineering, AI adoption, AI software factories, Software architecture, Technology strategy, Engineering leadership, Team building
 
